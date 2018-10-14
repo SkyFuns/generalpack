@@ -2,7 +2,7 @@
     "name": "generalpack",
     "authors": [
         {
-            "name": "liangyl",
+            "name": "skyFuns/liangyl",
             "email": "634689854@qq.com"
         }
     ],
@@ -12,15 +12,15 @@
     },
     "autoload": {
         "psr-4": {
-            "Generalpack\\Pack\\Queueengine\\Activemq\\": "src/",
-            "Generalpack\\Pack\\Servicediscover\\Serviceengine\\": "src/"
+            "SkyFuns\\Pack\\Queueengine\\Activemq\\": "src/",
+            "SkyFuns\\Pack\\Servicediscover\\Serviceengine\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Generalpack\\Pack\\Queueengine\\Activemq\\ActivemqServiceProvider",
-                "Generalpack\\Pack\\Servicediscover\\Serviceengine\\ServiceengineServiceProvider"
+                "SkyFuns\\Pack\\Queueengine\\Activemq\\ActivemqServiceProvider",
+                "SkyFuns\\Pack\\Servicediscover\\Serviceengine\\ServiceengineServiceProvider"
             ]
         }
     }
