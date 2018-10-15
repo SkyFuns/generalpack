@@ -1,5 +1,5 @@
 <?php
-namespace Generalpack\Pack\Queueengine\Activemq\Facades;
+namespace SkyFuns\Generalpack\Pack\Queueengine\Activemq\Facades;
 use Illuminate\Support\Facades\Facade;
 
 class ServiceQueue extends Facade {

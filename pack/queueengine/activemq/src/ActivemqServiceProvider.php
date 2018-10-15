@@ -1,6 +1,6 @@
 <?php
 
-namespace Generalpack\Pack\Queueengine\Activemq;
+namespace SkyFuns\Generalpack\Pack\Queueengine\Activemq;
 
 use Illuminate\Support\ServiceProvider;
 
