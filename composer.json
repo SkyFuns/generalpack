@@ -21,7 +21,11 @@
           "providers": [
             "SkyFuns\\Generalpack\\Pack\\Queueengine\\Activemq\\ActivemqServiceProvider",
             "SkyFuns\\Generalpack\\Pack\\Servicediscover\\Serviceengine\\ServiceengineServiceProvider"
-          ]
+          ],
+          "aliases":{
+                "Activemq":"SkyFuns\\Generalpack\\Pack\\Queueengine\\Activemq\\Facades\\ServiceQueue",
+                "Serviceengine":"SkyFuns\\Generalpack\\Pack\\Servicediscover\\Serviceengine\\Facades\\Serviceengine"
+          }
         }
     }
 }
