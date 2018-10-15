@@ -12,8 +12,8 @@
     },
     "autoload": {
         "psr-4": {
-            "SkyFuns\\Generalpack\\Pack\\Queueengine\\Activemq\\": "src/",
-            "SkyFuns\\Generalpack\\Pack\\Servicediscover\\Serviceengine\\": "src/"
+            "SkyFuns\\Generalpack\\Pack\\Queueengine\\Activemq\\": "pack/queueengine/activemq/src/",
+            "SkyFuns\\Generalpack\\Pack\\Servicediscover\\Serviceengine\\": "pack/servicediscover/serviceenginesrc/src/"
         }
     },
     "extra": {
