@@ -15,5 +15,13 @@
             "SkyFuns\\Generalpack\\Queueengine\\Activemq\\": "skyfuns/generalpack/queueengine/activemq/src/",
             "SkyFuns\\Generalpack\\Servicediscover\\Serviceengine\\": "skyfuns/generalpack/servicediscover/serviceengine/src/"
         }
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "Skyfuns\\Generalpack\\Queueengine\\Activemq\\ActivemqServiceProvider,
+            "Skyfuns\\Generalpack\\Servicediscover\\Serviceengine\\ServiceengineServiceProvider
+          ]
+        }
     }
 }
