@@ -12,16 +12,8 @@
     },
     "autoload": {
         "psr-4": {
-            "SkyFuns\\Pack\\Queueengine\\Activemq\\": "src/",
-            "SkyFuns\\Pack\\Servicediscover\\Serviceengine\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "SkyFuns\\Pack\\Queueengine\\Activemq\\ActivemqServiceProvider",
-                "SkyFuns\\Pack\\Servicediscover\\Serviceengine\\ServiceengineServiceProvider"
-            ]
+            "SkyFuns\\Generalpack\\Queueengine\\Activemq\\": "skyfuns/generalpack/queueengine/activemq/src/",
+            "SkyFuns\\Generalpack\\Servicediscover\\Serviceengine\\": "skyfuns/generalpack/servicediscover/serviceengine/src/"
         }
     }
 }
