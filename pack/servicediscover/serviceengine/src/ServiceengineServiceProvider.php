@@ -1,6 +1,6 @@
 <?php
 
-namespace Generalpack\Pack\Servicediscover\Serviceengine;
+namespace SkyFuns\Generalpack\Pack\Servicediscover\Serviceengine;
 
 use Illuminate\Support\ServiceProvider;
 

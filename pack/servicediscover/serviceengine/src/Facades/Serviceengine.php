@@ -1,6 +1,6 @@
 <?php
 
-namespace Generalpack\Pack\Servicediscover\Serviceengine\Facades;
+namespace SkyFuns\Generalpack\Pack\Servicediscover\Serviceengine\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

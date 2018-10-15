@@ -1,6 +1,6 @@
 <?php
 
-namespace Generalpack\Pack\Servicediscover\Serviceengine\Discover;
+namespace SkyFuns\Generalpack\Pack\Servicediscover\Serviceengine\Discover;
 
 interface BaseDiscover {
 	/**
