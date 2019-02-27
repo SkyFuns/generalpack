@@ -1,6 +1,6 @@
 <?php
 
-namespace SkyFuns\Generalpack\Pack\Servicediscover\Serviceengine\Discover;
+namespace Generalpack\Pack\Servicediscover\Serviceengine\Discover;
 
 class CommonDiscover implements BaseDiscover {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace SkyFuns\Generalpack\Pack\Servicediscover\Serviceengine\Discover;
+namespace Generalpack\Pack\Servicediscover\Serviceengine\Discover;
 
 use GuzzleHttp\Exception\TransferException;
 use SensioLabs\Consul\Exception\ClientException;

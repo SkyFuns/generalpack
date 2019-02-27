@@ -1,34 +1,37 @@
 {
-    "name": "skyfuns/generalpack",
+    "name": "generalpack",
     "authors": [
         {
-            "name": "skyFuns/liangyl",
+            "name": "liangyl",
             "email": "634689854@qq.com"
         }
     ],
     "require": {
+        "dingo/api": "v2.0.0-alpha2",
         "fusesource/stomp-php": "2.0.*",
         "sensiolabs/consul-php-sdk": "^3.0",
         "php-curl-class/php-curl-class": "8.3.2"
     },
     "autoload": {
         "psr-4": {
-            "SkyFuns\\Generalpack\\Pack\\Client\\Jwt\\": "pack/queueengine/client/jwt/",
-            "SkyFuns\\Generalpack\\Pack\\Queueengine\\Activemq\\": "pack/queueengine/activemq/src/",
-            "SkyFuns\\Generalpack\\Pack\\Servicediscover\\Serviceengine\\": "pack/servicediscover/serviceengine/src/"
+            "Generalpack\\Pack\\Db\\Singlequery\\": "pack/db/singlequery/src/",
+            "Generalpack\\Pack\\Client\\Jwt\\": "pack/client/jwt/src/",
+            "Generalpack\\Pack\\Queueengine\\Activemq\\": "pack/queueengine/activemq/src/",
+            "Generalpack\\Pack\\Servicediscover\\Serviceengine\\": "pack/servicediscover/serviceengine/src/"
         }
     },
     "extra": {
         "laravel": {
-          "providers": [
-            "SkyFuns\\Generalpack\\Pack\\Client\\Jwt\\JwtClientServiceProvider",
-            "SkyFuns\\Generalpack\\Pack\\Queueengine\\Activemq\\ActivemqServiceProvider",
-            "SkyFuns\\Generalpack\\Pack\\Servicediscover\\Serviceengine\\ServiceengineServiceProvider"
-          ],
-          "aliases":{
-                "JwtClient":"SkyFuns\\Generalpack\\Pack\\Client\\Jwt\\Facades\\JwtClient",
-                "Activemq":"SkyFuns\\Generalpack\\Pack\\Queueengine\\Activemq\\Facades\\ServiceQueue",
-                "Serviceengine":"SkyFuns\\Generalpack\\Pack\\Servicediscover\\Serviceengine\\Facades\\Serviceengine"
+            "providers": [
+                
+                "Generalpack\\Pack\\Client\\Jwt\\JwtClientServiceProvider",
+                "Generalpack\\Pack\\Queueengine\\Activemq\\ActivemqServiceProvider",
+                "Generalpack\\Pack\\Servicediscover\\Serviceengine\\ServiceengineServiceProvider"
+            ],
+            "aliases":{
+                "JwtClient":"Generalpack\\Pack\\Client\\Jwt\\Facades\\JwtClient",
+                "Activemq":"Generalpack\\Pack\\Queueengine\\Activemq\\Facades\\ServiceQueue",
+                "Serviceengine":"Generalpack\\Pack\\Servicediscover\\Serviceengine\\Facades\\Serviceengine"
           }
         }
     }

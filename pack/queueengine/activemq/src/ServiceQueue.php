@@ -1,6 +1,6 @@
 <?php
 
-namespace SkyFuns\Generalpack\Pack\Queueengine\Activemq;
+namespace Generalpack\Pack\Queueengine\Activemq;
 
 class ServiceQueue extends \FuseSource\Stomp\Stomp {
 	/**

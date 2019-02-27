@@ -1,6 +1,6 @@
 <?php
 
-namespace SkyFuns\Generalpack\Pack\Servicediscover\Serviceengine;
+namespace Generalpack\Pack\Servicediscover\Serviceengine;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -19,17 +19,17 @@ class ServiceengineServiceProvider extends ServiceProvider {
 	public function boot() {
 
 		$this->publishes([
-			__DIR__ . '/config/servicesengine.php' => config_path('servicesengine.php'),
+			__DIR__ . '/config/servicesengine.php' => app()->path() . "\..\config\servicesengine.php",
 
-			__DIR__ . '/Commands/Service/Services.php' => app_path() . "\Console\Commands\Service\Services.php",
+			__DIR__ . '/Commands/Service/Services.php' => app()->path() . "\Console\Commands\Service\Services.php",
 
-			__DIR__ . '/Commands/Service/DiscoverServices.php' => app_path() . "\Console\Commands\Service\DiscoverServices.php",
+			__DIR__ . '/Commands/Service/DiscoverServices.php' => app()->path() . "\Console\Commands\Service\DiscoverServices.php",
 
-			__DIR__ . '/Commands/Service/RegisterServices.php' => app_path() . "\Console\Commands\Service\RegisterServices.php",
+			__DIR__ . '/Commands/Service/RegisterServices.php' => app()->path() . "\Console\Commands\Service\RegisterServices.php",
 
-			__DIR__ . '/Commands/Service/UnregisterServices.php' => app_path() . "\Console\Commands\Service\UnregisterServices.php",
+			__DIR__ . '/Commands/Service/UnregisterServices.php' => app()->path() . "\Console\Commands\Service\UnregisterServices.php",
 
-			__DIR__ . '/Commands/Command.php' => app_path() . "\Console\Commands\Command.php",
+			__DIR__ . '/Commands/Command.php' => app()->path() . "\Console\Commands\Command.php",
 		]);
 	}
 	/**
