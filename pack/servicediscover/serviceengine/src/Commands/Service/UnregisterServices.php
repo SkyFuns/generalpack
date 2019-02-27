@@ -8,14 +8,14 @@ use SensioLabs\Consul\Exception\ServerException;
 class UnregisterServices extends Services {
 
 	/**
-	 * The name and signature of the console command.
+	 * 控制台命令的名称和签名
 	 *
 	 * @var string
 	 */
 	protected $signature = 'service:unregister {service_name}';
 
 	/**
-	 * The console command description.
+	 * 控制台命令描述。
 	 *
 	 * @var string
 	 */

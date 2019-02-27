@@ -7,26 +7,22 @@ use SensioLabs\Consul\Exception\ServerException;
 
 class DiscoverServices extends Services {
 	/**
-	 * The name and signature of the console command.
+	 * 控制台命令的名称和签名
 	 *
 	 * @var string
 	 */
 	protected $signature = 'service:discover {service_name}';
 
 	/**
-	 * The console command description.
+	 * 控制台命令描述。
 	 *
 	 * @var string
 	 */
 	protected $description = '发现服务';
 
 	public function handle() {
+
 		$service_name = $this->argument('service_name');
-
-		if (!empty($service_engine)) {
-			$this->serviceEngine = $service_engine;
-		}
-
 		try {
 			echo $this->ServiceEngine()->discover($service_name);
 		} catch (ServerException $e) {

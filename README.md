@@ -20,47 +20,23 @@
 	2.增加扩展包依赖：
 
 	"require": {
-        "generalpack": "master",
-		"sensiolabs/consul-php-sdk": "^3.0",
-		"fusesource/stomp-php": "2.0.*"
+        "generalpack": "master"
     }
 
 	3.使用 composer 更新扩展包
 	
 	composer update
 	  
-	4.增加psr-4自动加载
-
-    "psr-4": {
-			/**ActiveMQ队列加载***/
-            "Generalpack\\Pack\\Queueengine\\Activemq\\": "vendor/generalpack/pack/queueengine/activemq/src",
-	        /**服务管理加载***/    
-			"Generalpack\\Pack\\Servicediscover\\Serviceengine\\": "vendor/generalpack/pack/servicediscover/serviceengine/src"
-    }
-
-
-	5.使用composer加载
-
-	在项目根目录执行： composer dump-autoload
-
 	
-	二：在config/app.php中增加如下信息
-		/**服务提供商***/
-		'providers' => [
-			Generalpack\Pack\Queueengine\Activemq\ActivemqServiceProvider::class,
-			Generalpack\Pack\Servicediscover\Serviceengine\ServiceengineServiceProvider::class
-		]
-
-		/**加载类别名***/
-	    'aliases' => [
-			'Activemq' => Generalpack\Pack\Queueengine\Activemq\Facades\ServiceQueue::class,
-			'Serviceengine' => Generalpack\Pack\Servicediscover\Serviceengine\Facades\ServiceEngine::class
-		]
-
 	
-	三：在命令行中发布sengine配置
+	二：在命令行中发布扩展包配置
 
-	/**发布队列配置***/
+
+	/**发布JWT客户端配置***/
+	php artisan vendor:publish --provider="Generalpack\Pack\Client\Jwt\JwtClientServiceProvider"
+	
+
+	/**发布队列引擎配置***/
 	php artisan vendor:publish --provider="Generalpack\Pack\Queueengine\Activemq\ActivemqServiceProvider"
 
 
@@ -68,7 +44,7 @@
 	php artisan vendor:publish --provider="Generalpack\Pack\Servicediscover\Serviceengine\ServiceengineServiceProvider"
 
 	
-###代码调用实例
+###服务发现代码调用实例
 
 		namespace App\Http\Controllers;
 		use Illuminate\Http\Request;
@@ -84,7 +60,7 @@
 			}
 		}
 
-###命令调用实例
+####服务发现命令调用实例
 
 	
 

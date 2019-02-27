@@ -1,6 +1,6 @@
 <?php
 
-namespace SkyFuns\Generalpack\Pack\Servicediscover\Serviceengine;
+namespace Generalpack\Pack\Servicediscover\Serviceengine;
 
 class ServiceEngine {
 
@@ -24,7 +24,7 @@ class ServiceEngine {
 		$this->isregister = $this->config['Discover_Discover']['Register'];
 
 		if (empty($engine)) {
-			$engine = "StaticDiscover";
+			$engine = "Generalpack\Pack\Servicediscover\Serviceengine\Discover\StaticDiscover";
 		}
 		$this->engine = new $engine;
 	}
@@ -33,7 +33,7 @@ class ServiceEngine {
 		return $this->error;
 	}
 
-	public function register($service, $url) {
+	public function register($service = null, $url = null) {
 
 		if (!$this->isregister) {
 			$this->error = '注册服务已关闭';
@@ -52,7 +52,7 @@ class ServiceEngine {
 		return $this->engine->register($service, $url);
 	}
 
-	public function discover($service) {
+	public function discover($service = null) {
 
 		if (empty($service)) {
 			$this->error = '服务名不能为空';
@@ -62,7 +62,7 @@ class ServiceEngine {
 		return $this->engine->discover($service);
 	}
 
-	public function unregister($service) {
+	public function unregister($service = null) {
 		if (empty($service)) {
 			$this->error = '服务名不能为空';
 			return false;
